@@ -13,7 +13,7 @@ function TitleStart() {
 
     const logoStyle = {
         transition: "transform 1s",
-        transform: (stage !== "start") ? "translateY(-40%)" : "translateY(0)"
+        transform: (stage !== "start") ? `translateY(-40%)` : "translateY(0)"
     }
 
     return (

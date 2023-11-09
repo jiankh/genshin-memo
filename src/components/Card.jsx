@@ -1,24 +1,18 @@
-import { useState } from "react"
-import raiden from "../assets/characters/raiden.png"
+import { useState, useEffect, useContext } from "react"
 import '../styles/CardStyle.css'
 import backside from "/back-card.webp"
 
-function Card({ name, id, img }) {
-
-    const [isFlipped, setIsFlipped] = useState(true)
-    const toggleFlip = () => {
-        setIsFlipped(!isFlipped);
-    }
-
+function Card({ name, id, img, onClickFunctions, isFlipped}) {
+    
     const cardClasses = `${isFlipped ? 'card-flipped card' : "card"}`
 
     return (
-        <div className={cardClasses} onClick={toggleFlip}>
+        <div className={cardClasses} onClick={onClickFunctions} id={id}>
             <div className="card-inner">
                 <div className="card-front">
-                    <img src={raiden} alt="raiden" />
+                    <img src={img} alt={name} />
                     <div className="card-name">
-                        Raiden
+                        {name}
                     </div>
                 </div>
                 <div className="card-back">
