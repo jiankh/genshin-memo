@@ -6,149 +6,149 @@ const characters = [
         img: "./assets/characters/albedo.png"
     },
     {
-        id: 0,
-        name: "Alhaitham",
-        img: "./assets/characters/alhaitham.png"
-    },
-    {
-        id: 0,
+        id: 1,
         name: "Arataki",
         img: "./assets/characters/arataki.png"
     },
     {
-        id: 0,
+        id: 2,
         name: "Ayaka",
         img: "./assets/characters/ayaka.png"
     },
     {
-        id: 0,
+        id: 3,
         name: "Ayato",
         img: "./assets/characters/ayato.png"
     },
     {
-        id: 0,
+        id: 4,
         name: "Baizhu",
         img: "./assets/characters/baizhu.png"
     },
     {
-        id: 1,
+        id: 5,
         name: "Childe",
         img: "./assets/characters/childe.png"
     },
     {
-        id: 2,
+        id: 6,
         name: "Cyno",
         img: "./assets/characters/cyno.png"
     },
     {
-        id: 3,
+        id: 7,
         name: "Dehya",
         img: "./assets/characters/dehya.png"
     },
     {
-        id: 4,
-        name: "Diluc",
-        img: "./assets/characters/diluc.png"
-    },
-    {
-        id: 5,
+        id: 8,
         name: "Eula",
         img: "./assets/characters/eula.png"
     },
     {
-        id: 6,
+        id: 9,
         name: "Ganyu",
         img: "./assets/characters/ganyu.png"
     },
     {
-        id: 7,
+        id: 10,
         name: "Hutao",
         img: "./assets/characters/hutao.png"
     },
     {
-        id: 8,
+        id: 11,
         name: "Jean",
         img: "./assets/characters/jean.png"
     },
     {
-        id: 9,
+        id: 12,
         name: "Kazuha",
         img: "./assets/characters/kazuha.png"
     },
     {
-        id: 10,
+        id: 13,
         name: "Keqing",
         img: "./assets/characters/keqing.png"
     },
     {
-        id: 11,
+        id: 14,
         name: "Klee",
         img: "./assets/characters/klee.png"
     },
     {
-        id: 12,
+        id: 15,
         name: "Kotomi",
         img: "./assets/characters/kotomi.png"
     },
     {
-        id: 13,
+        id: 16,
         name: "Miko",
         img: "./assets/characters/miko.png"
     },
     {
-        id: 14,
+        id: 17,
         name: "Mona",
         img: "./assets/characters/mona.png"
     },
     {
-        id: 15,
+        id: 18,
         name: "Nahida",
         img: "./assets/characters/nahida.png"
     },
     {
-        id: 16,
+        id: 19,
         name: "Neuvillette",
         img: "./assets/characters/neuvillette.png"
     },
     {
-        id: 17,
+        id: 20,
         name: "Nilou",
         img: "./assets/characters/nilou.png"
     },
     {
-        id: 18,
+        id: 21,
         name: "Qiqi",
         img: "./assets/characters/qiqi.png"
     },
     {
-        id: 19,
+        id: 22,
         name: "Raiden",
         img: "./assets/characters/raiden.png"
     },
     {
-        id: 20,
+        id: 23,
         name: "Wriothesley",
         img: "./assets/characters/wriothesley.png"
     },
     {
-        id: 21,
+        id: 24,
         name: "Xiao",
         img: "./assets/characters/xiao.png"
     },
     {
-        id: 22,
+        id: 25,
         name: "Yelan",
         img: "./assets/characters/yelan.png"
     },
     {
-        id: 23,
+        id: 26,
         name: "Yoimiya",
         img: "./assets/characters/yoimiya.png"
     },
     {
-        id: 24,
+        id: 27,
         name: "Zhongli",
         img: "./assets/characters/zhongli.png"
+    },
+    {
+        id: 28,
+        name: "Alhaitham",
+        img: "./assets/characters/alhaitham.png"
+    },
+    {
+        id: 29,
+        name: "Diluc",
+        img: "./assets/characters/diluc.png"
     }
 ]
 

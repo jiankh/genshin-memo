@@ -5,6 +5,7 @@ import Controls from './components/Controls'
 import Paimon from './components/Paimon'
 import TitleStart from './components/TitleStart'
 import Card from './components/Card'
+import {makeCharactersObj} from "./helperFunctions"
 
 export const StageContext = createContext()
 
@@ -16,14 +17,7 @@ function App() {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
     
-    function getRandomArray() {
-        let numbers = new Set()
-        while (numbers.size < 10) {
-        numbers.add(getRandomIntInclusive(0,24))
-        }
-        
-        return Array.from(numbers)
-    }
+    
     
     
     
@@ -40,7 +34,7 @@ function App() {
             <TitleStart />
             <Card />
         </div>
-        {console.log(getRandomArray())}
+        {console.log(makeCharactersObj())}
     </StageContext.Provider>
     
     )

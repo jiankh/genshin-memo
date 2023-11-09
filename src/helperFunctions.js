@@ -1,3 +1,4 @@
+import { characters } from "./Data";
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -7,11 +8,24 @@ function getRandomIntInclusive(min, max) {
 
 function getRandomArray() {
     let numbers = new Set()
-    while (numbers.length < 10) {
-    numbers.push(getRandomIntInclusive(0,24))
+    while (numbers.size < 10) {
+    numbers.add(getRandomIntInclusive(0,24))
     }
-    return numbers
+    
+    return Array.from(numbers)
+}
+
+function makeCharactersObj() {
+    const arrayNums = getRandomArray();
+    let newArrCharacters = [];
+    arrayNums.forEach(num => {
+        newArrCharacters.push(characters[num])
+    })
+
+    return newArrCharacters
 }
 
 
-console.log(getRandomArray())
+
+export {makeCharactersObj}
+
