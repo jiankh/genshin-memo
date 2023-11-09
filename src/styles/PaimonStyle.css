@@ -1,0 +1,38 @@
+@keyframes fadeInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.paimon-container {
+    overflow: hidden;
+    position: fixed;
+    bottom: -10px;
+    left:-15px;
+    display:flex;
+    flex-direction: column;
+
+    animation: fadeInFromBottom 1s ease;
+
+}
+
+.paimon-container>pre {
+    padding-left:20px;
+    padding-bottom: 20px;
+    width: 200px;
+    text-wrap: wrap;
+    font-size: 1.1rem;
+    font-family: fantasy;
+    color: black;
+}
+
+.paimon {
+    width:100px;
+}
+
