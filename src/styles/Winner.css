@@ -1,0 +1,45 @@
+.paimon-img-win {
+    width: 20vw;
+    animation-duration: 2s;
+    animation-name: big-paimon;
+    animation-iteration-count: 1;
+}
+
+@keyframes big-paimon {
+    0% {
+        position: fixed;
+        width: 100px;
+        bottom: 0;
+        left: 0;
+    }
+
+    100% {
+        position: fixed;
+        width: 20vw;
+        bottom: 50%; /* Move towards the middle vertically */
+        left: 40%; /* Move towards the middle horizontally */
+        transform: translate(-50%, 50%); /* Center the element */
+    }
+}
+
+@keyframes move-text {
+    from {
+        transform: translatex(-10vw);
+    }
+    to {
+        transform: translateX(10vw);
+    }
+}
+
+.winner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+}
+
+.win-message {
+    animation: move-text 2s ;
+    font-size: 2rem;
+    font-weight: 800;
+}

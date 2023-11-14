@@ -8,7 +8,7 @@ function TitleStart() {
 
     
     function handleLogoStart() {
-       setStage("ingame")
+       setStage("ingame") //CHANGE
     }
 
     const logoStyle = {

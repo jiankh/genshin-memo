@@ -1,9 +1,12 @@
 import Card from "./Card"
-import { useState, useEffect } from "react"
-import { makeCharactersObj, makeDisplayCardsArray } from "../helperFunctions"
+import { useState, useEffect, useContext } from "react"
+import { checkIfClicked } from "../helperFunctions"
+import { StageContext } from "../App"
 
 
-function CardDisplay({ selectedChracters }) {
+function CardDisplay({ selectedChracters, removeCharacterFromArr,addCharacterToClickedArr, arrClicked }) {
+
+    const setStage = useContext(StageContext).setStage
 
     const [isFlipped, setIsFlipped] = useState(true)
 
@@ -11,14 +14,35 @@ function CardDisplay({ selectedChracters }) {
         setIsFlipped(false)
     }, [])
 
-    function onClickFunctions() {
-        setIsFlipped(!isFlipped)
+    function onClickFunctions(e) {
+        setIsFlipped(true)
+        const idOfCurrent = e.currentTarget.id
+
+        if (checkIfClicked(idOfCurrent, arrClicked)) { return setStage("loser") }
+
+        // if idOfCurrent is in the arr of clicked then end game "lose"
+
+        console.log(`current target id: ${e.currentTarget.id}`)
+
+        setTimeout(() => {
+            console.log(`current target id: ${idOfCurrent}`)
+            addCharacterToClickedArr(idOfCurrent);
+            removeCharacterFromArr(idOfCurrent);
+
+        }, 1500);
+        
+        //update cards
+        setTimeout(()=> {
+            setIsFlipped(false)
+        }, 2000)
+        
     }
 
     
 
     return (
-        <div className="card-container">
+        ((selectedChracters) && (
+            <div className="card-container">
             {selectedChracters.map((character) => (
                 <Card
                     isFlipped={isFlipped}
@@ -31,7 +55,9 @@ function CardDisplay({ selectedChracters }) {
             ))
             }
 
-        </div>
+            </div>
+        ))
+        
 
 
     )
