@@ -9,7 +9,7 @@ import Winner from './components/Winner'
 import Loser from './components/Loser'
 
 export const StageContext = createContext()
-const characters = makeCharactersObj(7,0,29)
+let characters = makeCharactersObj(7,0,29)
 
 function App() {        
 
@@ -31,6 +31,13 @@ function App() {
             return char.id === parseInt(id)
         })
         setArrClicked((prevArrClicked) => [...prevArrClicked, foundCharacter])
+    }
+
+    function resetGame() {
+        characters = makeCharactersObj(7,0,29)
+        setArrUnclicked(characters)
+        setArrClicked([])
+        setStage("ingame")
     }
 
     const displayCards = makeDisplayCardsArray(arrClicked, arrUnclicked)
@@ -59,11 +66,16 @@ function App() {
             />}    
 
             {(stage === "winner") && 
-                <Winner />
+                <Winner
+                    resetGame={resetGame}
+                />
             }
 
+
             {(stage === "loser") && 
-                <Loser />
+                <Loser 
+                    resetGame={resetGame}
+                />
             }
             
 

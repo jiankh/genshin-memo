@@ -38,8 +38,6 @@ function CardDisplay({ selectedChracters, removeCharacterFromArr,addCharacterToC
         
     }
 
-    
-
     return (
         ((selectedChracters) && (
             <div className="card-container">
