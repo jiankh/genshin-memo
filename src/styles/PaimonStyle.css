@@ -16,8 +16,6 @@
     bottom: -10px;
     left:-15px;
     display:flex;
-    flex-direction: column;
-
     animation: fadeInFromBottom 1s ease;
 
 }

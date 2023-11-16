@@ -149,3 +149,27 @@ video {
     }
 
 }
+
+@media (min-width: 1000px) and (max-height:775px) {
+    .round-container {
+        position: fixed;
+        bottom: 0;
+        transform: translateY(0); /* Reset translateY */
+    }
+}
+
+@media (max-height:900px) {
+    .paimon-container {
+        flex-direction: row-reverse;
+    }
+    pre {
+        height:100px;
+    }
+}
+
+@media (min-height:900px) {
+    .paimon-container {
+        flex-direction: column;
+
+    }
+}
