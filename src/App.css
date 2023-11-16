@@ -69,7 +69,7 @@ video {
 /* ROUND COUNTER  */
 
 .round-container {
-    transform: translateY(10vh);
+    transform: translateY(50vh);
     color: black;
     font-size: 2rem;
     font-weight: 800;
@@ -102,12 +102,14 @@ video {
         margin:0;
         top:20vh;
         left:15px;
+        transform: translateY(10vh);
         
     }
 
     .card-container {
+        position: absolute;
         flex-direction: column;
-        margin-top: 20vh;
+        top: 20vh;
         gap:200px;
     }
     .card {
