@@ -19,6 +19,7 @@ function CardDisplay({ selectedChracters, removeCharacterFromArr,addCharacterToC
         const idOfCurrent = e.currentTarget.id
 
         if (checkIfClicked(idOfCurrent, arrClicked)) { return setStage("loser") }
+        
 
         // if idOfCurrent is in the arr of clicked then end game "lose"
 

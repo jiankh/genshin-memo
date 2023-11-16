@@ -8,6 +8,7 @@ import CardDisplay from './components/CardDisplay'
 import Winner from './components/Winner'
 import Loser from './components/Loser'
 import RoundCount from './components/RoundCount'
+import HighestScore from './components/HighestScore'
 
 export const StageContext = createContext()
 let characters = makeCharactersObj(7,0,29)
@@ -18,6 +19,7 @@ function App() {
     const [arrClicked, setArrClicked] = useState([])
     const [arrUnclicked, setArrUnclicked] = useState(characters)
     const [round, setRound] = useState(1)
+    const [highestScore, setHighestScore] = useState(0)
 
     function removeCharacterFromArr(id) {
         const filteredArray = arrUnclicked.filter((obj) => {
@@ -50,6 +52,12 @@ function App() {
         }
     }, [arrUnclicked]);
 
+    useEffect(() => {
+        const score = 0
+        setRound(arrClicked.length)
+        setHighestScore(Math.max(round-1, arrClicked.length))
+    }, [arrClicked])
+
 
     return (
     <StageContext.Provider value={{stage, setStage}}>
@@ -58,6 +66,13 @@ function App() {
 
         <div className="content">
             <TitleStart />
+
+            {(stage === "ingame") && 
+            <HighestScore
+                highestScore={highestScore} 
+                score={round}    
+            />
+            }
 
             {(stage === "ingame") && 
             <CardDisplay 
