@@ -107,7 +107,7 @@ video {
 
     .card-container {
         flex-direction: column;
-        margin-top: 190vh;
+        margin-top: 20vh;
         gap:200px;
     }
     .card {
