@@ -7,6 +7,7 @@ import {makeCharactersObj, makeDisplayCardsArray} from "./helperFunctions"
 import CardDisplay from './components/CardDisplay'
 import Winner from './components/Winner'
 import Loser from './components/Loser'
+import RoundCount from './components/RoundCount'
 
 export const StageContext = createContext()
 let characters = makeCharactersObj(7,0,29)
@@ -16,6 +17,7 @@ function App() {
     const [stage, setStage] = useState("start")
     const [arrClicked, setArrClicked] = useState([])
     const [arrUnclicked, setArrUnclicked] = useState(characters)
+    const [round, setRound] = useState(1)
 
     function removeCharacterFromArr(id) {
         const filteredArray = arrUnclicked.filter((obj) => {
@@ -64,6 +66,11 @@ function App() {
                 removeCharacterFromArr={removeCharacterFromArr}
                 addCharacterToClickedArr={addCharacterToClickedArr}
             />}    
+            {(stage === "ingame") && 
+            <RoundCount 
+                round={round}    
+            />
+            }
 
             {(stage === "winner") && 
                 <Winner

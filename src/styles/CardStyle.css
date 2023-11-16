@@ -1,8 +1,7 @@
 
 
-
 .card-front, .card-back {
-    width: 10vw;
+    width: 180px;
     height: 350px;
     background-color: transparent;
 }
@@ -22,9 +21,7 @@
 
 .card-front > img {
     height: 300px;
-
 }
-
 
 .card-name {
     text-align: center;
@@ -35,7 +32,7 @@
 /* FLIP LOGIC */
 
 .card {
-    width: 10vw;
+    width: 180px;
     height:300px;
     perspective: 1000px;
 }
@@ -69,11 +66,9 @@
 /* CARD CONTAINER */
 
 .card-container {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
-    gap: 25px;
-    
+    gap: 25px; 
 }
