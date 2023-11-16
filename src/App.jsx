@@ -73,6 +73,12 @@ function App() {
                 score={round}    
             />
             }
+            
+            {(stage === "ingame") && 
+            <RoundCount 
+                round={round}    
+            />
+            }
 
             {(stage === "ingame") && 
             <CardDisplay 
@@ -81,11 +87,7 @@ function App() {
                 removeCharacterFromArr={removeCharacterFromArr}
                 addCharacterToClickedArr={addCharacterToClickedArr}
             />}    
-            {(stage === "ingame") && 
-            <RoundCount 
-                round={round}    
-            />
-            }
+            
 
             {(stage === "winner") && 
                 <Winner
