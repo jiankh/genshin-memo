@@ -55,7 +55,7 @@ function App() {
     useEffect(() => {
         const score = 0
         setRound(arrClicked.length)
-        setHighestScore(Math.max(round-1, arrClicked.length))
+        setHighestScore(prev => Math.max(prev,round-1, arrClicked.length))
     }, [arrClicked])
 
 
@@ -67,7 +67,7 @@ function App() {
         <div className="content">
             <TitleStart />
 
-            {(stage === "ingame") && 
+            {(stage !== "start") && 
             <HighestScore
                 highestScore={highestScore} 
                 score={round}    

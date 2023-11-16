@@ -23,19 +23,19 @@
 }
 
 .paimon-container>pre {
-    padding-left:20px;
-    padding-bottom: 20px;
+    padding: 10px;
     width: 200px;
     text-wrap: wrap;
     font-size: 1.1rem;
     font-family: fantasy;
     color: black;
+    background-color: transparent;
+    border-radius: 10px;
+    position: relative;
+    border: black 1px solid;
+    margin-left: 20px;
 }
 
 .paimon {
     width:100px;
 }
-
-
-
-
