@@ -90,3 +90,26 @@ video {
     background-color: rgb(217, 165, 32, 0.3);
     box-shadow: 3px 3px 3px black;
 }
+
+@media (max-width:1000px) {
+    .scoreboard {
+        margin:0;
+        top: 30vh;
+    }
+
+    .round-container {
+        position: fixed;
+        margin:0;
+        top:20vh;
+        left:15px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        margin-top: 150vh;
+        gap:200px;
+    }
+    .card {
+        margin-bottom: 50px;
+    }
+}
